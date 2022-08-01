@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #404C51;
+}
+
+.content {
+  margin-left: 250px;
+}
+
+.p-button-rounded {
+  margin-left: 15px!important;
+}
+
+@media screen and (max-width: 768px) and (max-width: 1280px) {
+  .flex {
+      display: grid !important;
+    }
+}

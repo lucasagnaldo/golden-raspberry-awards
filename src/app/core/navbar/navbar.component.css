@@ -1,0 +1,51 @@
+.navbar {
+    padding: 20px 0 10px;
+    background-color: #495057;
+}
+
+.navbar {
+    color: #fff;
+}
+
+.navbar-toggle {
+    color: #fff;
+}
+
+.navbar-menu {
+    position: fixed;
+    top: 48px;
+    bottom: 0;
+    width: 210px;
+    margin: 0;
+    padding: 0;
+    z-index: 9998;
+
+    background-color: #E0E0E0;
+
+    list-style: none;
+}
+
+.navbar-menuitem {
+    padding: 15px;
+}
+
+.navbar-menuitem a {
+    color: #c0bbb7;
+    text-decoration: none;
+}
+
+.navbar-menuitem a {
+    color: #494541
+}
+
+.navbar-menuitem a:hover {
+    color: #fff;
+}
+
+.navbar-menuitem.ativo a {
+    color: #337ab7;
+}
+
+.title {
+    margin-left: 25px;
+}

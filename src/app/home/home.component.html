@@ -1,0 +1,136 @@
+<div class="content">
+  <div class="p-col-12">
+    <div class="card-container">
+      <div class="flex">
+        <div class="flex-1 align-items-center m-2 px-5 py-3">
+          <div class="p-grid">
+            <h3>List years with multiple winners</h3>
+            <p-table [value]="winCounts" responsiveLayout="scroll">
+              <ng-template pTemplate="header">
+                <tr>
+                  <th>Year</th>
+                  <th>Win Count</th>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-win>
+                <tr>
+                  <td>{{ win.year }}</td>
+                  <td>{{ win.total }}</td>
+                </tr>
+              </ng-template>
+            </p-table>
+          </div>
+        </div>
+        <div class="flex-1 align-items-center m-2 px-5 py-3">
+          <div class="p-grid">
+            <h3>Top 3 studios with winners</h3>
+            <p-table [value]="studios" responsiveLayout="scroll">
+              <ng-template pTemplate="header">
+                <tr>
+                  <th>Name</th>
+                  <th>Win Count</th>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-studio>
+                <tr>
+                  <td>{{ studio.name }}</td>
+                  <td>{{ studio.winCount }}</td>
+                </tr>
+              </ng-template>
+            </p-table>
+          </div>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="flex-1 align-items-center m-2 px-5 py-3">
+          <div class="p-grid">
+            <h3>Producers with longest and shortest interval between wins</h3>
+            <h1>Maximum</h1>
+            <p-table
+              [value]="producersLongestIntervalBetweenWins"
+              responsiveLayout="scroll"
+            >
+              <ng-template pTemplate="header">
+                <tr>
+                  <th>Producer</th>
+                  <th>Interval</th>
+                  <th>Previous Year</th>
+                  <th>Following Year</th>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-producer>
+                <tr>
+                  <td>{{ producer.producer }}</td>
+                  <td>{{ producer.interval }}</td>
+                  <td>{{ producer.previousWin }}</td>
+                  <td>{{ producer.followingWin }}</td>
+                </tr>
+              </ng-template>
+            </p-table>
+          </div>
+          <div class="p-grid">
+            <h1>Minimum</h1>
+            <p-table
+              [value]="producersShortestIntervalBetweenWins"
+              responsiveLayout="scroll"
+            >
+              <ng-template pTemplate="header">
+                <tr>
+                  <th>Producer</th>
+                  <th>Interval</th>
+                  <th>Previous Year</th>
+                  <th>Following Year</th>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-producer>
+                <tr>
+                  <td>{{ producer.producer }}</td>
+                  <td>{{ producer.interval }}</td>
+                  <td>{{ producer.previousWin }}</td>
+                  <td>{{ producer.followingWin }}</td>
+                </tr>
+              </ng-template>
+            </p-table>
+          </div>
+        </div>
+        <div class="flex-1 align-items-center m-2 px-5 py-3">
+          <div class="p-grid">
+            <h3>List movie winners by year</h3>
+            <div class="col-12">
+              <div>
+                <p-inputNumber
+                  inputId="integeronly"
+                  [(ngModel)]="yearOfTheWinningFilm"
+                ></p-inputNumber>
+                <button
+                  pButton
+                  pRipple
+                  type="button"
+                  icon="pi pi-search"
+                  class="p-button-rounded"
+                  (click)="searchMovieWinByYear()"
+                ></button>
+              </div>
+            </div>
+            <p-table [value]="movies" responsiveLayout="scroll">
+              <ng-template pTemplate="header">
+                <tr>
+                  <th>Id</th>
+                  <th>Year</th>
+                  <th>Title</th>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-movie>
+                <tr>
+                  <td>{{ movie.id }}</td>
+                  <td>{{ movie.year }}</td>
+                  <td>{{ movie.title }}</td>
+                </tr>
+              </ng-template>
+            </p-table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
